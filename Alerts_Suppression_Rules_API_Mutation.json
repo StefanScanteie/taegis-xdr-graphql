@@ -1,0 +1,15 @@
+{
+  "operationName": "createQLRule",
+  "query": "mutation createQLRule($input: RuleInput!, $qlFilter: RuleQLFilterInput!) { createCustomQLRule(input: $input, qlFilter: $qlFilter) { createAlert createdAt deleted description enabled eventType id name filters { id key pattern ruleID inverted __typename } qlFilter { id query __typename } cve vid severity tenantID updatedAt attackCategories userID ruleAction status origin alertSeverity ruleType ruleSource tags attackCategories generativeAIRuleExplain attackCategoriesDetails { url description tactics techniqueID technique __typename } user { email given_name family_name is_scwx is_partner user_id status __typename } __typename } }",
+  "variables": {
+    "input": {
+      "name": "Custom Rule - API Using Postman",
+      "description": "Test",
+      "status": "SUPPRESSED",
+      "ruleAction": "SUPPRESS"
+    },
+    "qlFilter": {
+      "query": "from alert where @domain contains 'test'"
+    }
+  }
+}
