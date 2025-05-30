@@ -10,7 +10,7 @@
       "ruleAction": "TUNE"
     },
     "qlFilter": {
-      "query": "from alert where metadata.title = 'test' and tenant_id ='48454'"
+      "query": "from alert where tenant_id ='12345' and metadata.title = 'test'"
     }
   }
 }
